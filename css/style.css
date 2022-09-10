@@ -1,0 +1,247 @@
+:root {
+    --primario: #4C6293;
+    --secundario: #FFEECB;
+    --terciario: #AD3956;
+    --coloralterno: rgb(84, 120, 226);
+}
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box; /* Hack para box-model (el padding no afecte el tamaño) */
+}
+*, *:before, *::after {
+    box-sizing: inherit;
+}
+body {
+    font-size: 16px; /* 1rem = 10px */
+    font-family: 'Krub', sans-serif;
+}
+h1 {
+    font-size: 3.8rem;
+}
+h2 {
+    font-size: 2.8rem;
+    text-align: center;
+}
+h3 {
+    font-size: 1.8rem;
+}
+.contenedor {
+    max-width: 95%;
+}
+/* Header */
+.header {
+    background-color: var(--primario);
+}
+.header h1 {
+    color: white;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 3rem;
+}
+.contenido-header {
+    padding: 3rem;
+}
+@media (min-width: 768px) { 
+    .header h1 {
+        margin-bottom: 0;
+    }
+    .contenido-header {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+/* Navegación principal */
+.navegacion-principal a {
+    display: block;
+    text-align: center;
+    color: white;
+    padding: 1rem;
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: bold;
+}
+@media (min-width: 768px) { 
+    .navegacion-principal {
+        display: flex;
+        gap: 2rem;
+    }
+}
+.navegacion-principal a:hover {
+    background-color: var(--secundario);
+    color: black;
+}
+
+/* Imagen */
+.imagen {
+    background-image: url("../img/imagen.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 52rem;
+    position: relative;
+    margin-bottom: 2rem;
+}
+.contenido-imagen {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-end;
+}
+.contenido-imagen h2, .contenido-imagen p {
+    text-align: right;
+    z-index: 3;
+    color: white;
+}
+.contenido-imagen h2 {
+    padding-right: 2rem;
+}
+.contenido-imagen p {
+    background-color: var(--terciario);
+    padding: 1rem 2rem;
+    color: white;
+    font-weight: bold;
+    margin: 0;
+    text-align: right;
+}
+
+/* Perfil */
+.titulo {
+    background-color: var(--secundario);
+    padding: 1rem;
+}
+.perfil {
+    padding: 5rem 3rem;
+}
+.perfil-foto {
+    text-align: center;
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    border-radius:150px;
+}
+.perfil-contenido {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.perfil-edad {
+    color: var(--primario);
+    font-weight: 700;
+}
+.perfil-contenido .perfil-nombre {
+    text-align: left;
+}
+.perfil-contenido p {
+    text-align: justify;
+}
+h3 {
+    text-align: center;
+}
+@media (min-width: 768px) { 
+    .perfil {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        gap: 5rem;
+    }
+}
+.habilidades {
+    background-color: var(--primario);
+    color: var(--primario);
+    font-weight: bold;
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: space-around;
+}
+.habilidades p {
+    color: white;
+}
+
+/* Formación */
+.formacion {
+    background-color: var(--secundario);
+    padding: 5rem;
+    font-weight: bold;
+
+}
+.formacion-datos {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.formacion-fecha {
+    color: var(--primario);
+}
+.formacion-escuela {
+    color: black;
+}
+.formacion-especialidad, .formacion-carrera {
+    color: rgb(43, 42, 42);
+}
+
+/* Conocimientos */
+.conocimientos {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 1rem;
+    background-color: var(--primario);
+    margin-bottom: 4rem;
+    color: white;
+    font-weight: bold;
+}
+.cursos {
+    margin-bottom: 3rem;
+    padding: 2rem;
+    display: flex;
+    justify-content: space-evenly;
+}
+.cursos h4{
+    color: var(--primario);
+}
+.boton {
+    background-color: var(--secundario);
+    color: black;
+    padding: 0.5rem 2rem;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+    border: none;
+    border-radius: 0.5rem;
+}
+.boton:hover {
+    cursor: pointer;
+    background-color: var(--primario);
+    color: white;
+}
+.completado {
+    margin-right: 1rem;
+}
+.proceso {
+    margin-left: 1rem;
+}
+
+/* Contacto */
+.contacto {
+    background-color:var(--primario);
+    padding: 1rem;
+    color: white;
+}
+.contacto-datos {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    font-weight: bold;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    background-color: #AD3956;
+    color: white;
+    padding: 0.5rem;
+}
